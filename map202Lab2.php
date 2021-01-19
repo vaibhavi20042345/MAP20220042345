@@ -63,7 +63,7 @@ $films = array(
 	<tr>
 	<th>name</th>
 	<th>phone</th>
-	<th>phone</th>
+	<th>email</th>
 	</tr>
 	<?php
 	foreach($favorites as $detail) {
