@@ -1,22 +1,9 @@
 <html>
 <body>
 
-<?php
-	
-	  $dbhost = 'remotemysql.com';
-    $dbname = 'F5sEnaeasW';
-    $dbuser = 'F5sEnaeasW';
-    $dbpass = 'MQD9L2qY24';
-    
-    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-
-    $query = "SELECT * FROM fruits";
-    $stmt = $conn->prepare($query);
-    $stmt->execute();
-
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($result);
-
-?>
+<h1>
+	Welcome to Lab 3
+	</h1>
+	<a href='form.php'>Click here for Lab 3</a>
 	</body>
 </html>
