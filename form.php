@@ -6,8 +6,14 @@
 	$fruit= new Fruits();
 	$fruits=	$fruit->get_all_fruits();
 	//print_r($fruits);
+	
+	if($_SERVER('REQUEST_METHOD')=='POST')
+	{
+		echo "Form submitted"
+	}
+	
 ?>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="form.php">  
   <label for="Name">First Name</label> <br>
   <input type="text" name="firstname" id="firstname"><br>
 
