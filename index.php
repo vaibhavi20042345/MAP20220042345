@@ -2,8 +2,21 @@
 <body>
 
 <?php
-	echo "Vaibhavi Panchal" . "<br>";
-	echo date("l jS \of F Y h:i:s A");
+	
+	  $dbhost = 'remotemysql.com';
+    $dbname = 'F5sEnaeasW';
+    $dbuser = 'F5sEnaeasW';
+    $dbpass = 'MQD9L2qY24';
+    
+    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+
+    $query = "SELECT * FROM fruits";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    print_r($result);
+
 ?>
 	</body>
 </html>
