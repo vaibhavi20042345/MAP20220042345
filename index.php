@@ -4,6 +4,6 @@
 <h1>
 	Welcome to Lab 4
 	</h1>
-	<a href='form.php'>Click here for Lab 4</a>
+	<a href='login.php'>Click here to Login</a>
 	</body>
 </html>

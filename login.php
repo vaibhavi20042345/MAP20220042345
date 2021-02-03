@@ -1,3 +1,6 @@
+<?php
+ 	require_once('header.php');
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,17 +30,14 @@ button {
 </style>
 </head>
 <body>
-<?php
-$hash = password_hash('123456', PASSWORD_DEFAULT);	
-echo $hash;	
-?>
+
 	
-<form action="/action_page.php" method="post">
+<form action="login.php" method="post">
  
   <div class="container">
 	  <h2>Login Form</h2>
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required width="50%"> 
+    <input type="text" placeholder="Enter Username" name="uname" required> 
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
@@ -48,3 +48,6 @@ echo $hash;
 </form>
 </body>
 </html>
+<?php
+ 	require_once('footer.php');
+ ?>
