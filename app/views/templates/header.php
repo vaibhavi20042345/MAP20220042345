@@ -1,3 +1,9 @@
+<?php
+
+if (!isset($_SESSION['auth'])) {
+    header('Location: /login');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +27,6 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-
                 <div class="navbar-collapse collapse" id="navbar-main">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
@@ -37,5 +42,6 @@
                     </ul>
                 </div>
             </div>
+          </div>
         </div>
         -->

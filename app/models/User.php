@@ -15,16 +15,16 @@ class User {
          * if username and password good then
          * $this->auth = true;
          */
-		$username = strtolower($username);
+		
+		//$username = strtolower($username);
 		$db = db_connect();
-        $statement = $db->prepare("select * from users
-                                WHERE username = :name;
-                ");
-        $statement->bindValue(':name', $username);
+        $statement = $db->prepare('select * from Users
+                                WHERE username = :username;');
+        $statement->bindValue(':username', $username);
         $statement->execute();
         $rows = $statement->fetch(PDO::FETCH_ASSOC);
 		
-		if (password_verify($password, $rows['password'])) {
+		if (password_verify($password, $result['password'])) {
 			$_SESSION['auth'] = 1;
 			$_SESSION['username'] = ucwords($username);
 			unset($_SESSION['failedAuth']);
