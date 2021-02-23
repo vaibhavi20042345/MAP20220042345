@@ -14,8 +14,8 @@ define('LOGS', ROOT . DS . 'logs');
 define('FILES', ROOT . DS. 'files');
 
 // ---------------------  NEW FENIX DATABASE TABLE -------------------------
-define('DB_HOST',         'localhost');
-define('DB_USER',         'root'); 
-define('DB_PASS',         '');
-define('DB_DATABASE',     'map202');
+define('DB_HOST',         'remotemysql.com');
+define('DB_USER',         'F5sEnaeasW'); 
+define('DB_PASS',         'MQD9L2qY24');
+define('DB_DATABASE',     'F5sEnaeasW');
 define('DB_PORT',         '');
