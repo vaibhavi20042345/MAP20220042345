@@ -15,8 +15,7 @@ class User {
          * if username and password good then
          * $this->auth = true;
          */
-		
-		//$username = strtolower($username);
+		$username = strtolower($username);
 		$db = db_connect();
         $statement = $db->prepare('select * from Users
                                 WHERE username = :username;');
@@ -24,7 +23,7 @@ class User {
         $statement->execute();
         $rows = $statement->fetch(PDO::FETCH_ASSOC);
 		
-		if (password_verify($password, $result['password'])) {
+		if (password_verify($password, $rows['password'])) {
 			$_SESSION['auth'] = 1;
 			$_SESSION['username'] = ucwords($username);
 			unset($_SESSION['failedAuth']);
