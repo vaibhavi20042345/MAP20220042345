@@ -1,11 +1,14 @@
 <?php
  	class Course {
- 		public function __construct() {
-
- 		}
- 		public function get_all_courses() {
+ 		
+		    public function __construct($param=false){}
+		
+ 		public function get_all_courses($department) {
+			//$department = $_REQUEST['department'];
  			$db = db_connect();
- 			$statement = $db->prepare("select * from courses;");
+ 			$statement = $db->prepare("select * from courses where department= :department;");
+			 $statement->execute(array(':department' => $department));
+			//$statement->bindParam(':department',$department);
  			$statement->execute();
  			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
  			return $rows;

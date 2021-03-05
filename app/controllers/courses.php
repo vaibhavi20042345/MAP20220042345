@@ -9,21 +9,21 @@
      }
 		
  	public function display ($department = null, $program = null) {
- 		if($program) {
+ 		if($department) {
  			$course = $this->model('Course');
- 			$courseList =  $course->get_all_courses($program);
- 			$this->view('courses/index', ['courses' => $courseList]);
+ 			$courseList =  $course->get_all_courses($department);
+ 			$this->view('courses/display', ['$courseList' => $courseList]);
  			die;
  		}
- 		if($department){
+ 		/*if($department){
  			$course = $this->model('Course');
  			$programs =  $course->get_all_programs($department);
  			$this->view('courses/programs', ['programs' => $program]);
  			die;
 
- 		}
+ 		}*/
 		
-			
+		
  	}
 		
  	}

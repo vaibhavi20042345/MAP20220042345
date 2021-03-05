@@ -12,17 +12,11 @@
 		  
  	<div class="row">
      <div class="col-lg-12">
-		
-		 
- 		<?php foreach ($data['departments'] as $course) {  ?>
-		
-		  <a href="https://www.saultcollege.ca/programs/categories/<?php echo $course['Department']; ?>">
-       <?php 
-		$course = str_replace('-', ' ', $course);
-		echo ucwords($course['Department']); ?>
-   </a>
-		 <br>
-		 
+ 		<?php foreach ($data['$courseList'] as $course) {  ?> 
+		   <?php 
+		 $name = $course['courseName'];
+		 echo "<a href=/courses/display/",urlencode($course['courseName']),">$name</a>";
+		 ?>
  		<br>
  		<?php } ?>
 		</div>
