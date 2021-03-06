@@ -43,11 +43,3 @@
  <?php require_once 'app/views/templates/footer.php' ?>
 	 
 	  
-	 <?php
-$days = array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
- 
-// Printing array size
-echo count($data['$courseList']);
-echo "<br>";
-echo sizeof($data['programs']);
-?>

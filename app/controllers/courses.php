@@ -17,9 +17,9 @@
  			$this->view('courses/display', ['$courseList' => $courseList, 'programs' =>$programs]);
  			die;
  		}
- 		else if($program){
+ 		if($program){
  			$course = $this->model('Course');
- 			$programs =  $course->get_all_courses($program);
+ 			$programs =  $course->get_all_courses($department,$program);
 			$courseList =  [];
  			$this->view('courses/display', ['$courseList' => $courseList, 'programs' => $programs]);
  			die;

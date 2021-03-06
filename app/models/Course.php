@@ -3,10 +3,10 @@
  		
 		    public function __construct($param=false){}
 		
- 		public function get_all_courses($program) {
+ 		public function get_all_courses($department, $program) {
  			$db = db_connect();
- 			$statement = $db->prepare("select * from courses where program = :program;");
-			 $statement->execute(array(':program' => $program));
+ 			$statement = $db->prepare("select * from courses where department= :department and program = :program;");
+			 $statement->execute(array(':department' => $department, ':program' => $program));
  			$statement->execute();
  			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
  			return $rows;
