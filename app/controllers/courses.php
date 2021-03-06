@@ -4,7 +4,8 @@
      public function index() {
  		$course = $this->model('Course');
  		$departments = $course->get_all_departments();
- 	    $this->view('courses/index', ['departments' => $departments]);
+		$programs = $course->get_all_programs();
+ 	    $this->view('courses/index', ['departments' => $departments, 'programs' =>$programs]);
  		die;
      }
 		
