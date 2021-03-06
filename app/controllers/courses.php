@@ -12,17 +12,18 @@
  	public function display ($department = null, $program = null) {
  		if($department) {
  			$course = $this->model('Course');
- 			$courseList =  $course->get_all_courses($department);
- 			$this->view('courses/display', ['$courseList' => $courseList]);
+ 			$courseList =  $course->get_all_programs_by_department($department);
+			$programs = [];
+ 			$this->view('courses/display', ['$courseList' => $courseList, 'programs' =>$programs]);
  			die;
  		}
- 		/*if($department){
+ 		if($program){
  			$course = $this->model('Course');
- 			$programs =  $course->get_all_programs($department);
- 			$this->view('courses/programs', ['programs' => $program]);
+ 			$programs =  $course->get_all_courses($department);
+			$courseList =  [];
+ 			$this->view('courses/programs', ['$courseList' => $courseList, 'programs' => $program]);
  			die;
-
- 		}*/
+ 		}
 		
 		
  	}
