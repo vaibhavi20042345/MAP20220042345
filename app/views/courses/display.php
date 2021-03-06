@@ -35,6 +35,8 @@
  		<br>
  		 <?php } }?>
 		 
+		 <br>
+		 <a href="javascript:history.go(-1)" title="Return to the previous page">&laquo; Go back</a>
 		</div>
 	 </div>
 		

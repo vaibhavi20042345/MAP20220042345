@@ -24,8 +24,6 @@
  			$this->view('courses/display', ['$courseList' => $courseList, 'programs' => $programs]);
  			die;
  		}
-		
-		
  	}
 		
  	}
