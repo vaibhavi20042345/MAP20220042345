@@ -27,10 +27,10 @@
 		 
 	<?php
 		 if(count($data['programs'] ) > 0){
-		foreach ($data['programs']  as $program) {  ?> 
+		foreach ($data['programs']  as $programbyDepartment) {  ?> 
 		   <?php  
-		$pname = $program['courseName'];
-		 echo "<a href=/courses/display/",urlencode($program),">$pname</a>";
+		$pname = $programbyDepartment['courseName'];
+		 echo "<a href=/courses/display/",urlencode($programbyDepartment),">$pname</a>";
 		 ?>
  		<br>
  		 <?php } }?>
