@@ -14,7 +14,7 @@
 
  		public function get_all_departments() {
  			$db = db_connect();
- 			$statement = $db->prepare("select distinct(Department) from courses");
+ 			$statement = $db->prepare("select DISTINCT(Department),Program from courses");
  			$statement->execute();
  			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
  			return $rows;
@@ -22,7 +22,7 @@
 		
 		public function get_all_programs() {
  			$db = db_connect();
- 			$statement = $db->prepare("select Department,courseName from courses group by Department, courseName");
+ 			$statement = $db->prepare("select DISTINCT(Department),Program from courses");
  			$statement->execute();
  			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
  			return $rows;

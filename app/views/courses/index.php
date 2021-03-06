@@ -25,18 +25,12 @@
 		<?php foreach ($data['departments'] as $course) {  ?>
 		 <?php 
 		 $name = $course['Department'];
+		 $pname=$course['Program'];
 			echo '<tr><td>'; 
 			echo "<a href=/courses/display/",urlencode($course['Department']),">$name</a>"; 
-			echo '</td><td>';	?>
-	 <?php 
-	 foreach($data['programs'] as $program) 
-	 {
-    	  	if ($program['Department'] == $name) { 
-			$pname=$program['courseName'];
-        	echo "<a href=/courses/display/",urlencode($program['Department']),"/",urlencode($program['courseName']),">$pname</a><br>"; 
-		}
-	 }	
-	echo '</td></tr>';
+			echo '</td><td>';	
+			echo "<a href=/courses/display/",urlencode($course['Department']),"/",urlencode($course['Program']),">$pname</a><br>"; 
+	 		echo '</td></tr>';
 	}	
 	?>
 	
