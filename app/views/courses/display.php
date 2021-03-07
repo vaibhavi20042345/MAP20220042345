@@ -19,7 +19,7 @@
 		foreach ($data['$courseList']  as $course) {  ?> 
 		   <?php  
 		$name = $course['Program'];
-		 echo "<a href=/courses/display/",urlencode($course),">$name</a>";
+		 echo $name;
 		 ?>
  		<br>
  		 <?php } }?>
@@ -30,7 +30,7 @@
 		foreach ($data['programs']  as $programbyDepartment) {  ?> 
 		   <?php  
 		$pname = $programbyDepartment['courseName'];
-		 echo "<a href=/courses/display/",urlencode($programbyDepartment),">$pname</a>";
+		 echo $pname;
 		 ?>
  		<br>
  		 <?php } }?>

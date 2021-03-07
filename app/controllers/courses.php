@@ -1,6 +1,5 @@
 <?php
  	class Courses extends Controller {
-
      public function index() {
  		$course = $this->model('Course');
  		$departments = $course->get_all_departments();
@@ -8,7 +7,6 @@
  	    $this->view('courses/index', ['departments' => $departments, 'programs' =>$programs]);
  		die;
      }
-		
  	public function display ($department = null, $program = null) {
  		if($department && $program == null) {
  			$course = $this->model('Course');
@@ -25,6 +23,22 @@
  			die;
  		}
  	}
+	public function insert() {
+		$this->view('courses/insert');
+		die;
+	}
+	public function submit_insert(){
 		
+		$courseId = $_POST['courseId'];
+		$courseName =$_POST['courseName'];
+		$Department = $_POST['Department'];
+		$Program = $_POST['Program'];
+		
+		$course = $this->model('Course');
+		$this->$course->submit_index($courseId,$courseName,$Department,$Program);
+		echo $courseName;
+		$this->view('courses/index');
+		die;
+		}
  	}
  ?> 
