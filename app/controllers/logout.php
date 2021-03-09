@@ -3,8 +3,9 @@
 
      public function index() {	
  		
- 		$_SESSION = array();
+ 		//$_SESSION = array();
  		session_destroy();
- 	    header ('Location: /login');
- 		die;
+ 	    $this->view('login/index');
+ 	die;
      }
+	}

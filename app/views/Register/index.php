@@ -14,7 +14,7 @@
 	<b style="color:blue">Create your new account</b><br>
 	<br>
 <b>User name:</b><br>
-<input type="text" name="user_name" >
+<input type="text" name="username" >
 <br><br>
 </b>Password:</b><br>
 <input type="password" name="password">
