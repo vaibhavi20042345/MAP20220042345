@@ -2,7 +2,7 @@
 
 class App {
 
-    protected $controller = 'login';
+    protected $controller = 'Register';
     //protected $method = 'login';
     protected $method = 'index';
     protected $params = [];
@@ -39,7 +39,7 @@ class App {
             }
             unset($url[1]);
         } else {
-            header('Location: /login');
+            header('Location: /Register');
             die;
         }
 

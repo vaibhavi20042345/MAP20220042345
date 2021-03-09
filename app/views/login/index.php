@@ -1,27 +1,20 @@
 <style>
-		form{
+	form{
 	margin: 10% 10% 10% 30%;
     margin-left: 50% color: olive;
     padding: 30px;
 	}
 </style>
-
-
 <?php require_once 'app/views/templates/headerPublic.php' ?>
 <main role="main" class="container">
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-              
 				<?php if ($_SESSION['failedAuth'])  
-			echo	'<P>
-					Login failed. Use right username and password
-				</P>';
-	?>
+			echo	'<P> Login failed. Use right username and password </P>'; ?>
             </div>
         </div>
     </div>
-
 <div class="row">
     <div class="col-sm-auto">
 		<form action="/login/verify" method="post" >
@@ -40,7 +33,7 @@
 		  <button type="submit" class="btn btn-primary">Login</button>
 			<br>
 			<br>
-			<a href="reginster/index" >Create Account</a>
+			<a href="/Register/index" >Create Account</a>
 		</fieldset>
 		</form> 
 	</div>

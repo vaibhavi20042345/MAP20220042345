@@ -6,9 +6,7 @@ class User {
     public $password;
     public $auth = false;
 
-    public function __construct() {
-        
-    }
+    public function __construct() { }
 
     public function authenticate($username, $password) {
         /*
