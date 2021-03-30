@@ -18,10 +18,7 @@ class Login extends Controller {
 			die;
 		}
 			else {
-			$message ="You should not enter numeric values for Username 
-			Please Check and try again";
-					
-				
+			$message ="You should not enter numeric values for Username. Please Check and try again";
 			}
 		$this->view('login/index', ['message' => $message]);
     }

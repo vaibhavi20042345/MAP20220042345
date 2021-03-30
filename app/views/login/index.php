@@ -4,7 +4,9 @@
     margin-left: 50% color: olive;
     padding: 30px;
 	}
-	
+	h4{
+		color: red;
+	}
 </style>
 <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
 <?php require_once 'app/views/templates/headerPublic.php' ?>
@@ -12,12 +14,14 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
+				<h4>
 				<?php if ($_SESSION['failedAuth'])  
-			echo	'<P> Login failed. Use right username and password </P>'; 
+		echo	'<P> Login failed. Use right username and password </P>'; 
 				if($data['message']){?>
 					<?= $data['message'];?>
 				<?php }
 				?>
+						</h4>
             </div>
         </div>
     </div>
