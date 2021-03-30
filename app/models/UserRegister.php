@@ -16,6 +16,6 @@ public function insert_user($username,$password)
 	{
 	$db = db_connect();
 	$statement = $db->prepare("insert into Users (username, password) values(:username,:password)");
-	$statement->execute(array(':username' => $username, 'password'=>$password));
+	$statement->execute(array(':username' => $username, ':password'=>$password));
 	}
 }

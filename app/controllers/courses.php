@@ -22,6 +22,10 @@
  			$this->view('courses/display', ['$courseList' => $courseList, 'programs' => $programs]);
  			die;
  		}
+		else
+		{
+			die;
+		}
  	}
 	public function insert() {
 		$this->view('courses/insert');
