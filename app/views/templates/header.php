@@ -13,7 +13,7 @@
     </head>
     <body>  
        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">MAP 202 Lab 8</a>
+  <a class="navbar-brand" href="/home">MAP 202 Lab 8</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,6 +26,14 @@
       </li>
       <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=="courses") echo  "active" ?>">
         <a class="nav-link" href="/courses">Courses</a>
+		 <span class="sr-only">(current)</span>
+      </li>
+		 <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=="manager") echo  "active" ?>">
+        <a class="nav-link" href="/manager">Managers</a>
+		 <span class="sr-only">(current)</span>
+      </li>
+		<li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=="staff") echo  "active" ?>">
+        <a class="nav-link" href="/staff">Staff</a>
 		 <span class="sr-only">(current)</span>
       </li>
 		 <li class="nav-item">

@@ -1,6 +1,7 @@
 <?php
  	class Courses extends Controller {
      public function index() {
+		 	check_permissions();
  		$course = $this->model('Course');
  		$departments = $course->get_all_departments();
 		$programs = $course->get_all_programs();
