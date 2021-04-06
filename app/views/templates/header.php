@@ -13,11 +13,11 @@
     </head>
     <body>  
        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="/home">MAP 202 Lab 8</a>
+  <a class="navbar-brand" href="/home">MAP 202 Lab 9</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+<div class="col-md-9">   
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=="home") 
@@ -39,8 +39,19 @@
 		 <li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
+		
     </ul>
     </div>
+	</div>
+	<div class="col-md-4">
+	<div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+	<li>
+	<a class="nav-link" href="#"><?php echo $_SESSION[username] ?> | <?php echo $_SESSION[permissions][role] ?></a>
+	</li>
+	</ul>
+		</div>
+	</div>
 </nav>
 </div>
     
