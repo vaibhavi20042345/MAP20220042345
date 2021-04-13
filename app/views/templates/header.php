@@ -36,6 +36,10 @@
         <a class="nav-link" href="/staff">Staff</a>
 		 <span class="sr-only">(current)</span>
       </li>
+		<li class="nav-item <?php if(basename($_SERVER['PHP_SELF'])=="Weather") echo  "active" ?>">
+        <a class="nav-link" href="/Weather">Weather</a>
+		 <span class="sr-only">(current)</span>
+      </li>
 		 <li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
       </li>

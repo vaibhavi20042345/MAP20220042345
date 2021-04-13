@@ -1,6 +1,6 @@
 <?php
 
-class Weather extends Controller {
+class weather extends Controller {
 
     public function index() {	
 		$cityName ='Sault Ste. Marie';
@@ -8,8 +8,14 @@ class Weather extends Controller {
 		
 		$result = $model->get_weather($cityName);
 		
-		echo "It is ". round($result['temperature']['temp']). " degrees ";
-		echo "with ". $result['description']['description'];
+		$temperature=round($result['temperature']['temp']);
+		$des=$result['description']['description'];
+		
+		//echo "It is ". round($result['temperature']['temp']). " degrees ";
+		//echo "with ". $result['description']['description'];
+		
+		$this->view('weather/index', ['city'=>$cityName,'temperature' => $temperature, 'description' =>$des]);
+ 		die;
     }
 
 }
