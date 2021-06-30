@@ -21,12 +21,44 @@
       $this->conn = $db;
     }
 
-   
+  
    
 
     // Create Post
     public function create() {
-          // Create query
+		
+		  $query = "select * from UserMaster where Email=:Email and Password=:Password";
+
+          // Prepare statement
+          $stmt = $this->conn->prepare($query);
+
+          // Clean data
+       
+        $this->Email = htmlspecialchars(strip_tags($this->Email));
+        $this->Password = htmlspecialchars(strip_tags($this->Password));
+		$this->DeviceToken = htmlspecialchars(strip_tags($this->DeviceToken));
+          
+
+          // Bind data
+      
+          	$stmt->bindParam(':Email', $this->Email);
+      
+		 	$stmt->bindParam(':Password', $this->Password);
+         	$stmt->bindParam(':DeviceToken', $this->DeviceToken);
+		
+
+          // Execute query
+          if($stmt->execute(array(':Email' => $this->Email, ':Password'=>$this->Password))) {
+			  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			 // $count = $rows->rowCount();
+		if($rows)
+		{
+			return false;
+			
+		}
+		else
+		{
+			 // Create query
           $query = 'INSERT INTO ' . $this->table . ' SET Name = :Name, Email = :Email, Phone = :Phone, Password =:Password, DeviceToken=:DeviceToken, IsActive=:IsActive, IsDelete=:IsDelete,RoleId=:RoleId';
 
           // Prepare statement
@@ -59,8 +91,8 @@
       printf("Error: %s.\n", $stmt->error);
 
       return false;
+		}
+		  }
+         
     }
-
-  
-    
   }
