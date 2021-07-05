@@ -30,12 +30,12 @@ $post->OldPassword = $data->OldPassword;
 	if($post->read_single())
 	{
 		 echo json_encode(
-      array('message' => 'Password Change sucessfully')
+      array('message' => 'Password Change sucessfully','status'=>'true')
     );
 	}
   } else {
     echo json_encode(
-      array('message' => 'Invalid old password')
+      array('message' => 'Invalid old password','status'=>'false')
     );
   }
 

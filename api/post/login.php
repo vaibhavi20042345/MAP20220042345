@@ -28,11 +28,11 @@ $post->DeviceToken = $data->DeviceToken;
   // Create post
   if($post->read_single()) {
     echo json_encode(
-      array('message' => 'User Found', 'Data'=>$result)
+      array('message' => 'User Found','status'=>'true', 'Data'=>$result)
     );
   } else {
     echo json_encode(
-      array('message' => 'User Not Found')
+      array('message' => 'User Not Found','status'=>'false')
     );
   }
 

@@ -25,11 +25,11 @@
   // Create post
   if($post->read_single()) {
     echo json_encode(
-      array('message' => 'User Found', 'UserId'=>$result[0]['UserId'])
+      array('message' => 'User Found','status'=>'true', 'UserId'=>$result[0]['UserId'])
     );
   } else {
     echo json_encode(
-      array('message' => 'User Not Found')
+      array('message' => 'User Not Found','status'=>'false')
     );
   }
 

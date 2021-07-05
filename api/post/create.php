@@ -32,11 +32,11 @@ $post->RoleId = $data->RoleId;
   // Create post
   if($post->create()) {
     echo json_encode(
-      array('message' => 'User Created')
+      array('message' => 'User Created','status'=>'true')
     );
   } else {
     echo json_encode(
-      array('message' => 'User already registerd')
+      array('message' => 'User already registerd','status'=>'false')
     );
   }
 
