@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'app/init.php';
+require_once 'Admin/init.php';
 
 $app = new App;
 
