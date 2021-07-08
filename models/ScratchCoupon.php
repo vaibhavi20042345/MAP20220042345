@@ -21,7 +21,7 @@
     // Create Post
     public function read_single() {
           // Create query
-          $query = "select * from Coupon where UserId='$this->UserId' and CouponId='$this->CouponId'";
+          $query = "select * from Coupon where UserId='$this->UserId' and CouponId='$this->CouponId' and IsScratched=0";
 
           // Prepare statement
           $stmt = $this->conn->prepare($query);
