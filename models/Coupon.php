@@ -8,7 +8,9 @@
     public $UserId;
     public $CouponCode;
     public $IsScratched;
-    
+	  public $CompanyName;
+      public $ValidDate;
+	    public $DiscountPercentage;
 	  
     // Constructor with DB
     public function __construct($db) {
