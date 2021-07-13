@@ -1,10 +1,10 @@
 <?php 
-  class Notification {
+  class ReadNotification {
    private $conn;
     private $table = 'Notifications';
 
     // Post Properties
-    public $NotificationId;
+     public $NotificationId;
     public $UserId;
     public $Description;
     public $IsOpen;
@@ -21,24 +21,27 @@
 
     // Create Post
     public function read_single() {
-          // Create query
-          $query = "select * from Notifications where UserId='$this->UserId' and IsOpen=0";
+		
+		$query1= "UPDATE Notifications SET IsOpen=1 where UserId='$this->UserId'";
+		 $stmt1 = $this->conn->prepare($query1);
+         
+         $this->UserId = htmlspecialchars(strip_tags($this->UserId));
+	
+      	 $stmt1->bindParam(':UserId', $this->UserId);
+		
+         // Execute query
+         if($stmt1->execute(array(':UserId' => $UserId))) {	   
 
           // Prepare statement
-          $stmt = $this->conn->prepare($query);
-
-          // Clean data
-       
-          $this->UserId = htmlspecialchars(strip_tags($this->UserId));
-
-          // Bind data
-       $stmt->bindParam(':UserId', $this->UserId);
+        
 
           // Execute query
-           if($stmt->execute(array(':UserId' => $UserId))) {
-			  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
- 			return $rows;
+        if($stmt1->execute()) {
+            return true;
+      			}
+			   return true;
 			}
+		
 	
 	
       // Print error if something goes wrong
