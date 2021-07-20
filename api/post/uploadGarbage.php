@@ -1,25 +1,41 @@
-<?php
+<?php 
+  // Headers
+  header('Access-Control-Allow-Origin: *');
+  header('Content-Type: application/json');
+  header('Access-Control-Allow-Methods: POST');
+  header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-header("Content-Type: application/json");
-header("Acess-Control-Allow-Origin: *");
-header("Acess-Control-Allow-Methods: POST");
-header("Acess-Control-Allow-Headers: Acess-Control-Allow-Headers,Content-Type,Acess-Control-Allow-Methods, Authorization");
+  include_once '../../config/Database.php';
+  include_once '../../models/UploadGarbage.php';
 
-//include '../../config/Database.php'; // include database connection file
+  // Instantiate DB & connect
+  $database = new Database();
+  $db = $database->connect();
 
-$data = json_decode(file_get_contents("php://input"), true); // collect input parameters and convert into readable format
+  // Instantiate blog post object
+  $post = new UploadGarbage($db);
+
+  // Get raw posted data
+  $data = json_decode(file_get_contents("php://input"));
+
+ // $post->UserId  = (int)$data->UserId;
+  $post->UserId = $data->UserId;
+
+ $post->Image = $data->Image;
+ $post->Location = $data->Location;
+ $post->Notes = $data->Notes;
+
 	
-$fileName  =  $_FILES['fileToUpload']['name'];
-$tempPath  =  $_FILES['fileToUpload']['tmp_name'];
-$fileSize  =  $_FILES['fileToUpload']['size'];
+  // Create post
+  if($post->upload()) {
+	
+		 echo json_encode(
+      array('message' => 'Data saved sucessfully','status'=>'true')
+    );
+	
+  } else {
+    echo json_encode(
+      array('message' => 'Data not saved','status'=>'false')
+    );
+  }
 
-	$target_dir = "../../upload/";	
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-
-
-move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
-		
-// if no error caused, continue ....
-
-
-?>

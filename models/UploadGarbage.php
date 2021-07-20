@@ -22,7 +22,7 @@
     public function upload() {
 		
 		 // Create query
-       $query = 'INSERT INTO Garbage SET UserId=1, Image = :Image, Location = :Location, Notes =:Notes';
+       $query = 'INSERT INTO Garbage SET UserId=:UserId, Image = :Image, Location = :Location, Notes =:Notes';
 
           // Prepare statement
          $stmt = $this->conn->prepare($query);
@@ -35,7 +35,7 @@
           
 
           // Bind data
-       $stmt->bindParam(':UserId', $this->UserId);
+      	$stmt->bindParam(':UserId', $this->UserId,PDO::PARAM_INT);
           $stmt->bindParam(':Image', $this->Image);
           $stmt->bindParam(':Location', $this->Location);
 		 $stmt->bindParam(':Notes', $this->Notes);
