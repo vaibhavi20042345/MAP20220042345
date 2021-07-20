@@ -16,10 +16,17 @@ $fileSize  =  $_FILES['fileToUpload']['size'];
 	$target_dir = "../../upload/";	
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
+$temp = explode(".", $_FILES["file"]["name"]);
+$ext = pathinfo($fileName, PATHINFO_EXTENSION);
+$newfilename = round(microtime(true))  . end($temp).'.'.$ext;
 
-move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
+
+//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
+	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $newfilename );
 		
 // if no error caused, continue ....
-
+echo json_encode(
+      array('message' => 'Image uploaded successfully','status'=>'true', 'Data'=>$newfilename)
+    );
 
 ?>

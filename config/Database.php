@@ -8,7 +8,7 @@
    // private $conn;
 
 	  
-	   private   $dbhost = 'localhost';
+	   private   $dbhost = '31.170.161.43';
     private  $dbname = 'u326543761_SaffIndia';
     private $dbuser = 'u326543761_SaffIndia';
     private  $dbpass = 'SaffIndia@123';
@@ -16,7 +16,8 @@
 	  
     // DB Connect
     public function connect() {
-      $dbhost = 'localhost';
+      //$dbhost = 'localhost';
+		$dbhost='31.170.161.43';
     $dbname = 'u326543761_SaffIndia';
     $dbuser = 'u326543761_SaffIndia';
     $dbpass = 'SaffIndia@123';
@@ -27,7 +28,7 @@
    // $dbpass = 'MQD9L2qY24';
     
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-
    return $conn;
+		
     }
   }

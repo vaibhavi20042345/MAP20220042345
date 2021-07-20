@@ -10,43 +10,45 @@
     public $Image;
     public $Location;
     public $Notes;
-	public $CreatedDate;
+	
 	  
     // Constructor with DB
-  //  public function __construct($db) {
-    //  $this->conn = $db;
-    //}
+    public function __construct($db) {
+      $this->conn = $db;
+    }
 
+  
     // Create Post
-    public function create() {
+    public function upload() {
 		
-	$name = $_FILES['file']['name'];
-  $target_dir = "/workspace/MAP202_20042345/upload/";
-		
-  $target_file = $target_dir . basename($_FILES["file"]["name"]);
+		 // Create query
+       $query = 'INSERT INTO Garbage SET UserId=1, Image = :Image, Location = :Location, Notes =:Notes';
 
-  // Select file type
-  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+          // Prepare statement
+         $stmt = $this->conn->prepare($query);
 
-  // Valid file extensions
-  $extensions_arr = array("jpg","jpeg","png","gif");
+          // Clean data
+          $this->UserId = htmlspecialchars(strip_tags($this->UserId));
+          $this->Image = htmlspecialchars(strip_tags($this->Image));
+          $this->Location = htmlspecialchars(strip_tags($this->Location));
+  $this->Notes = htmlspecialchars(strip_tags($this->Notes));
+          
 
-  // Check extension
-  if( in_array($imageFileType,$extensions_arr) ){
-     // Upload file
-     if(move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name)){
-        // Insert record
-		    printf("message: %s.\n", 'true');
-     //   $query = "insert into Garbage(Image,UserId) values('".$name."',1)";
-       // mysqli_query($con,$query);
-     }
-
-  }
-		
+          // Bind data
+       $stmt->bindParam(':UserId', $this->UserId);
+          $stmt->bindParam(':Image', $this->Image);
+          $stmt->bindParam(':Location', $this->Location);
+		 $stmt->bindParam(':Notes', $this->Notes);
+     
+          // Execute query
+         if($stmt->execute()) {
+            return true;
+      }
 
       // Print error if something goes wrong
       printf("Error: %s.\n", $stmt->error);
 
-      return false;
-		}
-}
+    //  return false;
+         
+    }
+  }
