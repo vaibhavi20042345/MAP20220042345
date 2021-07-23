@@ -37,7 +37,7 @@
         $this->Email = htmlspecialchars(strip_tags($this->Email));
         $this->Password = htmlspecialchars(strip_tags($this->Password));
 		$this->DeviceToken = htmlspecialchars(strip_tags($this->DeviceToken));
-          
+           
 
           // Bind data
       
@@ -77,6 +77,7 @@
           $stmt->bindParam(':Email', $this->Email);
           $stmt->bindParam(':Phone', $this->Phone);
 		 $stmt->bindParam(':Password', $this->Password);
+		//	 $stmt->bindParam(':DOB', $this->DOB);
           $stmt->bindParam(':DeviceToken', $this->DeviceToken);
 		$stmt->bindParam(':IsActive', $this->IsActive);
 		$stmt->bindParam(':IsDelete', $this->IsDelete);
