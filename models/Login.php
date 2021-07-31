@@ -41,7 +41,6 @@
           // Bind data
       
           	$stmt->bindParam(':Email', $this->Email);
-      
 		 	$stmt->bindParam(':Password', $this->Password);
          	$stmt->bindParam(':DeviceToken', $this->DeviceToken);
 		
