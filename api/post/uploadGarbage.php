@@ -18,6 +18,14 @@ $data = json_decode(file_get_contents("php://input"), true); // collect input pa
 
   // Instantiate blog post object
   $post = new UploadGarbage($db);
+
+  $post->UserId = $_POST['UserId'];
+	
+  $post->Location = $_POST['Location'];
+  $post->Notes = $_POST['Notes'];
+  $result =  $post->garbagedata();
+
+
   $path = 'http://saafindiawcf.hyunixsolutions.com/upload/';
 if($_FILES["fileToUpload1"]["name"] != '')
 	{
@@ -36,12 +44,14 @@ if($_FILES["fileToUpload1"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload1"]["tmp_name"], $target_dir . $newfilename1 );
 		
-		  $post->UserId = $_POST['UserId'];
+		//  $post->UserId = $_POST['UserId'];
 	
  		  $post->Image = $path.$newfilename1;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
+ 		  //$post->Location = $_POST['Location'];
+ 		  $post->GarbageId = $result;
 		  $post->upload();
+		 // $result =  $post->garbagedata();
+		//echo json_encode(array('message' =>'Image uploaded successfully','status'=>$result) );
 	}
 
 if($_FILES["fileToUpload2"]["name"] != '')
@@ -61,11 +71,12 @@ if($_FILES["fileToUpload2"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_dir . $newfilename2);
 		
-		  $post->UserId = $_POST['UserId'];
+		 // $post->UserId = $_POST['UserId'];
  		  $post->Image = $path.$newfilename2;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
-		  $post->upload();
+ 		 //$post->Location = $_POST['Location'];
+ 		 // $post->Notes = $_POST['Notes'];
+	  	$post->GarbageId = $result;	  
+		$post->upload();
 	}
 
 if($_FILES["fileToUpload3"]["name"] != '')
@@ -85,10 +96,11 @@ if($_FILES["fileToUpload3"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_dir . $newfilename3);
 		
-		  $post->UserId = $_POST['UserId'];
- 		  $post->Image = $path.$newfilename3;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
+		 // $post->UserId = $_POST['UserId'];
+ 		    $post->Image = $path.$newfilename3;
+ 		 // $post->Location = $_POST['Location'];
+ 		 // $post->Notes = $_POST['Notes'];
+		  $post->GarbageId = $result;	 
 		  $post->upload();
 	}
 
@@ -109,10 +121,11 @@ if($_FILES["fileToUpload4"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload4"]["tmp_name"], $target_dir . $newfilename4 );
 		
-		  $post->UserId = $_POST['UserId'];
+		  //$post->UserId = $_POST['UserId'];
  		  $post->Image = $path.$newfilename4;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
+ 		  //$post->Location = $_POST['Location'];
+ 		  //$post->Notes = $_POST['Notes'];
+		  $post->GarbageId = $result;	 
 		  $post->upload();
 	}
 
@@ -133,10 +146,11 @@ if($_FILES["fileToUpload5"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload5"]["tmp_name"], $target_dir . $newfilename5 );
 		
-		  $post->UserId = $_POST['UserId'];
+		  //$post->UserId = $_POST['UserId'];
  		  $post->Image = $path.$newfilename5;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
+ 		  //$post->Location = $_POST['Location'];
+ 		  //$post->Notes = $_POST['Notes'];
+	      $post->GarbageId = $result;	
 		  $post->upload();
 	}
 
@@ -158,10 +172,11 @@ if($_FILES["fileToUpload6"]["name"] != '')
 		//move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)
 		move_uploaded_file($_FILES["fileToUpload6"]["tmp_name"], $target_dir . $newfilename6 );
 		
-		  $post->UserId = $_POST['UserId'];
+		//  $post->UserId = $_POST['UserId'];
  		  $post->Image = $path.$newfilename6;
- 		  $post->Location = $_POST['Location'];
- 		  $post->Notes = $_POST['Notes'];
+ 		//  $post->Location = $_POST['Location'];
+ 		//  $post->Notes = $_POST['Notes'];
+	      $post->GarbageId = $result;	
 		  $post->upload();
 	}
 
