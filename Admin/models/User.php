@@ -43,6 +43,12 @@ class User {
 		}
     }
 	
-
+public function get_all_users() {
+ 			$db = db_connect();
+ 			$statement = $db->prepare("SELECT C.UserId as Id, C.Name as Name,C.Email as Email, C.Phone as Phone,C.DOB as DOB, C.IsActive as IsActive, U.RoleName as Role FROM `UserMaster` as C join `RoleMaster` as U WHERE C.RoleId = U.RoleId");
+ 			$statement->execute();
+ 			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+ 			return $rows;
+ 		}
 
 }

@@ -1,9 +1,3 @@
-<?php
-
-//if (isset($_SESSION['auth'])) {
-  //  header('Location: /home');
-//} 
-?> 
 <!DOCTYPE html>
 <!--
 Template Name: Materialize - Material Design Admin Template
@@ -28,7 +22,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google.">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template, eCommerce dashboard, analytic dashboard">
     <meta name="author" content="ThemeSelect">
-    <title>Coupons | Saaf India</title>
+    <title>Users | Saaf India</title>
     <link rel="apple-touch-icon" href="../Admin/app-assets/images/favicon/apple-touch-icon-152x152.png">
     <link rel="shortcut icon" type="image/x-icon" href="../Admin/app-assets/images/favicon/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -147,7 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <ol class="breadcrumbs mb-0">
                   <li class="breadcrumb-item"><a href="index.html">Home</a>
                   </li>
-                  <li class="breadcrumb-item active">Coupon
+                  <li class="breadcrumb-item active">Users
                   </li>
                 </ol>
               </div>
@@ -172,20 +166,20 @@ License: You must have a valid license purchased only from themeforest(the above
               <table id="page-length-option" class="display">
                 <thead>
                   <tr>
-                    <th>Coupon Code</th>
                     <th>User</th>
-                    <th>Company</th>
-                    <th>Discount %</th>
-                    <th>Valid date</th>
-                    <th>Scrached</th>
+                    <th>Email Id</th>
+                    <th>Phone</th>
+                    <th>DOB</th>
+					 <th>Role</th>
+                    <th>Active</th>
                   </tr>
                 </thead>
                 <tbody>
 					<?php
-	foreach($data['couponslist']  as $detail) {
-  	echo '<tr><td>' .$detail['CouponCode']. '</td><td>' .$detail['User']. '</td><td>' .$detail['Company']. '</td><td>' .$detail['Discount']. '</td><td>' .$detail['ValidDate']. '</td><td>'?> <?php if($detail['Scratched']==0){?>
+	foreach($data['userslist']  as $detail) {
+  	echo '<tr><td>' .$detail['Name']. '</td><td>' .$detail['Email']. '</td><td>' .$detail['Phone']. '</td><td>' .$detail['DOB']. '</td><td>' .$detail['Role']. '</td><td>'?> <?php if($detail['IsActive']==1){?>
 					<i class="material-icons">check</i>
-					<?php } else { ?> <i class="material-icons dp48">clear</i> <?php }?> <?php $detail['Scratched']. '</td></tr>';
+					<?php } else { ?> <i class="material-icons dp48">clear</i> <?php }?> <?php $detail['IsActive']. '</td></tr>';
 	}	
 	?>
                   <!-- <tr>
@@ -199,12 +193,12 @@ License: You must have a valid license purchased only from themeforest(the above
                 </tbody>
                 <tfoot>
                   <tr>
-                   <th>Coupon Code</th>
-                    <th>User</th>
-                    <th>Company</th>
-                    <th>Discount %</th>
-                    <th>Valid date</th>
-                    <th>Scrached</th>
+                   <th>User</th>
+                    <th>Email Id</th>
+                    <th>Phone</th>
+                    <th>DOB</th>
+					 <th>Role</th>
+                    <th>Active</th>
                   </tr>
                 </tfoot>
               </table>
