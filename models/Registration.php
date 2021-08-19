@@ -37,7 +37,7 @@
         $this->Email = htmlspecialchars(strip_tags($this->Email));
         $this->Password = htmlspecialchars(strip_tags($this->Password));
 		$this->DeviceToken = htmlspecialchars(strip_tags($this->DeviceToken));
-           
+          
 
           // Bind data
       
@@ -77,7 +77,6 @@
           $stmt->bindParam(':Email', $this->Email);
           $stmt->bindParam(':Phone', $this->Phone);
 		 $stmt->bindParam(':Password', $this->Password);
-		//	 $stmt->bindParam(':DOB', $this->DOB);
           $stmt->bindParam(':DeviceToken', $this->DeviceToken);
 		$stmt->bindParam(':IsActive', $this->IsActive);
 		$stmt->bindParam(':IsDelete', $this->IsDelete);
@@ -85,33 +84,6 @@
 
           // Execute query
           if($stmt->execute()) {
-			  
-			 $query1 = "select * from UserMaster where Email=:Email and Password=:Password";
-          	 $stmt1 = $this->conn->prepare($query1);
-			 $this->Email = htmlspecialchars(strip_tags($this->Email));
-        	 $this->Password = htmlspecialchars(strip_tags($this->Password));
-			 $stmt1->bindParam(':Email', $this->Email);
-		 	 $stmt1->bindParam(':Password', $this->Password);
-			 $stmt1->execute(array(':Email' => $this->Email, ':Password'=>$this->Password));
-			 $rows = $stmt1->fetchAll(PDO::FETCH_ASSOC);
-			  echo $rows;
-			  $userId = $rows[0]['UserId'];
-			  
-			   $query2 = 'INSERT INTO Coupon SET UserId=:UserId, CouponCode="NewUserCode1", IsScratched=0, ValidDate =:$date, DiscountPercentage=10';
-			 
-			 $date=date("Y-m-d");
-			 // $date = date("F jS, Y");
-			  $date= date('Y-m-d', strtotime($date. ' + 10 days')); 
-			  
-			 $query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode, IsScratched, DiscountPercentage) VALUES (NULL, :UserId, "NewUserCode1", 0, 5), (NULL, :UserId, "NewUserCode2", 0, 10),(NULL, :UserId, "NewUserCode3", 0, 15),(NULL, :UserId, "NewUserCode4", 0, 20),(NULL, :UserId, "NewUserCode5", 0, 25);';
-			  
-		
-			$stmt2 = $this->conn->prepare($query2);
-			  $stmt2->bindParam(':UserId', $userId);
-			  $stmt2->bindParam(':$date', $date);
-		
-			$stmt2->execute();
-			  
             return true;
       }
 

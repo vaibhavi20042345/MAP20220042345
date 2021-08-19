@@ -15,7 +15,7 @@ class Admin {
         // This will return a broken up URL
         // it will be /controller/method
         $url = $this->parseUrl();
-		
+	//	 "<pre>";print_r($url); "</pre>";exit;
 		//echo "<pre>";
 		//print_r ($url);
 		//die;
@@ -25,6 +25,7 @@ class Admin {
          */
 
         if (file_exists('Admin/controllers/' . $url[1] . '.php')) {
+			//"<pre>";print_r("in"); "</pre>";exit;
             $this->controller = $url[1];
 
             $_SESSION['controller'] = $this->controller;
@@ -39,6 +40,7 @@ class Admin {
             }
             unset($url[1]);
         } else {
+			//	"<pre>";print_r("out"); "</pre>";exit;
             header('Location: /login');
             die;
         }
