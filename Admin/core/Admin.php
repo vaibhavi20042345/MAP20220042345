@@ -8,13 +8,15 @@ class Admin {
     protected $params = [];
 
     public function __construct() {
-        if (isset($_SESSION['auth']) == 1) {
-            $this->method = 'index';
-        } 
+        
+        // if (isset($_SESSION['auth']) == 1) {
+        //     $this->method = 'index';
+        // } 
 
         // This will return a broken up URL
         // it will be /controller/method
         $url = $this->parseUrl();
+      //  print_r($url); die;
 	//	 "<pre>";print_r($url); "</pre>";exit;
 		//echo "<pre>";
 		//print_r ($url);
@@ -25,7 +27,7 @@ class Admin {
          */
 
         if (file_exists('Admin/controllers/' . $url[1] . '.php')) {
-			//"<pre>";print_r("in"); "</pre>";exit;
+	//	echo	"<pre>";print_r("in"); "</pre>";exit;
             $this->controller = $url[1];
 
             $_SESSION['controller'] = $this->controller;
@@ -35,6 +37,7 @@ class Admin {
              * We do not want the method to be login in this case, but instead index
              * 
              */
+            
             if (in_array($this->controller, $this->special_url)) {
                 $this->method = 'index';
             }
@@ -62,7 +65,7 @@ class Admin {
         // This will rebase the params to a new array (starting at 0)
         // if params exist
         $this->params = $url ? array_values($url) : [];
-
+ //print_r($this);die;
         call_user_func_array([$this->controller, $this->method], $this->params);		
     }
 
