@@ -11,5 +11,13 @@
  			return $rows;
  		}
 		
+		
+		public function get_all_users() {
+ 			$db = db_connect();
+ 			$statement = $db->prepare("SELECT UserId, Email FROM `UserMaster` WHERE IsActive=1 and IsDelete=0");
+ 			$statement->execute();
+ 			$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+ 			return $rows;
+ 		}
 	}
 ?>

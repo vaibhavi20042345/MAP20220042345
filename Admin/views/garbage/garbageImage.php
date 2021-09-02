@@ -23,19 +23,19 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template, eCommerce dashboard, analytic dashboard">
     <meta name="author" content="ThemeSelect">
     <title>Garbage Images | Saaf India</title>
-    <link rel="apple-touch-icon" href="../Admin/app-assets/images/favicon/apple-touch-icon-152x152.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../Admin/app-assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../../Admin/app-assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Admin/app-assets/images/favicon/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- BEGIN: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="../Admin/app-assets/vendors/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Admin/app-assets/vendors/vendors.min.css">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../Admin/app-assets/css/themes/vertical-modern-menu-template/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../Admin/app-assets/css/themes/vertical-modern-menu-template/style.min.css">
-    <link rel="stylesheet" type="text/css" href="../Admin/app-assets/css/pages/cards-basic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Admin/app-assets/css/themes/vertical-modern-menu-template/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Admin/app-assets/css/themes/vertical-modern-menu-template/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Admin/app-assets/css/pages/cards-basic.min.css">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../Admin/app-assets/css/custom/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../Admin/app-assets/css/custom/custom.css">
     <!-- END: Custom CSS-->
   </head>
   <!-- END: Head-->
@@ -50,7 +50,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../Admin/app-assets/images/icon/pdf-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src="../../Admin/app-assets/images/icon/pdf-image.png" width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Two new item submitted</span><small class="grey-text">Marketing Manager</small></div>
             </div>
             <div class="status"><small class="grey-text">17kb</small></div>
@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../Admin/app-assets/images/icon/doc-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src="../../Admin/app-assets/images/icon/doc-image.png" width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">52 Doc file Generator</span><small class="grey-text">FontEnd Developer</small></div>
             </div>
             <div class="status"><small class="grey-text">550kb</small></div>
@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../Admin/app-assets/images/icon/xls-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src="../../Admin/app-assets/images/icon/xls-image.png" width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">25 Xls File Uploaded</span><small class="grey-text">Digital Marketing Manager</small></div>
             </div>
             <div class="status"><small class="grey-text">20kb</small></div>
@@ -74,7 +74,7 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img src="../Admin/app-assets/images/icon/jpg-image.png" width="24" height="30" alt="sample image"></div>
+              <div class="avatar"><img src="../../Admin/app-assets/images/icon/jpg-image.png" width="24" height="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Anna Strong</span><small class="grey-text">Web Designer</small></div>
             </div>
             <div class="status"><small class="grey-text">37kb</small></div>
@@ -84,28 +84,28 @@ License: You must have a valid license purchased only from themeforest(the above
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../Admin/app-assets/images/avatar/avatar-7.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src="../../Admin/app-assets/images/avatar/avatar-7.png" width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">John Doe</span><small class="grey-text">UI designer</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../Admin/app-assets/images/avatar/avatar-8.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src="../../Admin/app-assets/images/avatar/avatar-8.png" width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Michal Clark</span><small class="grey-text">FontEnd Developer</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../Admin/app-assets/images/avatar/avatar-10.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src="../../Admin/app-assets/images/avatar/avatar-10.png" width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Milena Gibson</span><small class="grey-text">Digital Marketing</small></div>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="collection-item" href="#">
           <div class="display-flex">
             <div class="display-flex align-item-center flex-grow-1">
-              <div class="avatar"><img class="circle" src="../Admin/app-assets/images/avatar/avatar-12.png" width="30" alt="sample image"></div>
+              <div class="avatar"><img class="circle" src="../../Admin/app-assets/images/avatar/avatar-12.png" width="30" alt="sample image"></div>
               <div class="member-info display-flex flex-column"><span class="black-text">Anna Strong</span><small class="grey-text">Web Designer</small></div>
             </div>
           </div></a></li>
@@ -165,18 +165,25 @@ License: You must have a valid license purchased only from themeforest(the above
  
     <div class="row">
       <div class="row">
-		   <div class="col s12 m6 l6">
-      <div class="card">
-        <div class="card-image">
-          <img src="../Admin/app-assets/images/gallery/4.png" alt="sample" /> <span class="card-title">Card
-            Title</span>
-        </div>
+		<?php
+		  foreach($data['list']  as $detail) {
+		echo '<div class="col s12 m6 l6">
+	<div class="card">
+	<div class="card-image">';
+	echo $detail['Image'];
+	'<img src=' .$detail['Image']. 'alt="sample" /> <span class="card-title">Card
+	Title</span>
 	</div>
-    </div>
+	</div>
+	</div>'; 
+		  }	
+	?>
+		
+		 
     <div class="col s12 m6 l6">
       <div class="card">
         <div class="card-image">
-          <img src="../Admin/app-assets/images/gallery/3.png" alt="sample" /> 
+          <img src="../../Admin/app-assets/images/gallery/3.png" alt="sample" /> 
         </div>
       
        
@@ -229,7 +236,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-7.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-7.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -241,7 +248,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-1.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-1.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -253,7 +260,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-2.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-2.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -265,7 +272,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-3.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-3.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -277,7 +284,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-4.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-4.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -289,7 +296,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-5.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-5.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -301,7 +308,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-6.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-6.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -313,7 +320,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-7.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-7.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -325,7 +332,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-8.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-8.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -337,7 +344,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-1.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-1.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -349,7 +356,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-9.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-9.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -361,7 +368,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-10.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-10.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -373,7 +380,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-off avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-11.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-11.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -385,7 +392,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
                 data-target="slide-out-chat">
                 <span class="avatar-status avatar-online avatar-50"><img
-                    src="../Admin/app-assets/images/avatar/avatar-12.png" alt="avatar" />
+                    src="../../Admin/app-assets/images/avatar/avatar-12.png" alt="avatar" />
                   <i></i>
                 </span>
                 <div class="user-content">
@@ -547,7 +554,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">12 new users registered</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src="../../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
                     class="mr-1">Registration.doc
                 </div>
               </li>
@@ -556,7 +563,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">Tina is attending your activity</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src="../../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
                     class="mr-1">Activity.doc
                 </div>
               </li>
@@ -586,7 +593,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h6 class="timeline-title">Database overloaded 89%</h6>
                 <p class="timeline-text">Here are some news feed interactions concepts.</p>
                 <div class="timeline-content">
-                  <img src="../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
+                  <img src="../../Admin/app-assets/images/icon/pdf.png" alt="document" height="30" width="25"
                     class="mr-1">Database-log.doc
                 </div>
               </li>
@@ -620,7 +627,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <li class="chat-body">
       <ul class="collection">
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -633,7 +640,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -651,7 +658,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </li>
 
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -664,7 +671,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -687,7 +694,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -695,7 +702,7 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </li>
         <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
-          <span class="avatar-status avatar-online avatar-50"><img src="../Admin/app-assets/images/avatar/avatar-7.png"
+          <span class="avatar-status avatar-online avatar-50"><img src="../../Admin/app-assets/images/avatar/avatar-7.png"
               alt="avatar" />
           </span>
           <div class="user-content speech-bubble">
@@ -991,15 +998,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
-    <script src="../Admin/app-assets/js/vendors.min.js"></script>
+    <script src="../../Admin/app-assets/js/vendors.min.js"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME  JS-->
-    <script src="../Admin/app-assets/js/plugins.min.js"></script>
-    <script src="../Admin/app-assets/js/search.min.js"></script>
-    <script src="../Admin/app-assets/js/custom/custom-script.min.js"></script>
-    <script src="../Admin/app-assets/js/scripts/customizer.min.js"></script>
+    <script src="../../Admin/app-assets/js/plugins.min.js"></script>
+    <script src="../../Admin/app-assets/js/search.min.js"></script>
+    <script src="../../Admin/app-assets/js/custom/custom-script.min.js"></script>
+    <script src="../../Admin/app-assets/js/scripts/customizer.min.js"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <!-- END PAGE LEVEL JS-->

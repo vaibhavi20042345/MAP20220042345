@@ -11,8 +11,8 @@ class Coupon extends Controller {
 	
 	public function addCoupons(){
 		$course = $this->model('Coupons');
- 		//$couponslist = $course->get_all_coupons();
- 	    $this->view('coupon/addCoupons');
+ 		$userlist = $course->get_all_users();
+ 	    $this->view('coupon/addCoupons', ['userlist' => $userlist]);
  		die;
 	}
 

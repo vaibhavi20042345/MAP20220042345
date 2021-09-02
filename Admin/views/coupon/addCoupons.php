@@ -194,12 +194,13 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <div class="input-field col s12">
                   <label for="password">Valid Date *</label>
-                  <input id="password" type="password" name="password" data-error=".errorTxt3">
+					<input type="date" name="date1" name="ValidDate" id="ValidDate" min="<?= date('Y-m-d'); ?>">
                   <small class="errorTxt3"></small>
                 </div>
                 <div class="input-field col s12">
-                  <label for="cpassword">Discount *</label>
-                  <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4">
+                  <label for="cpassword">Discount(%) *</label>
+					<input type="number" min="0" max="100" step="0.01" id="Discount" name="Discount"/>
+                  <!-- <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4"> -->
                   <small class="errorTxt4"></small>
                 </div>
 				  <div class="input-field col s12">
@@ -209,9 +210,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                <!-- Auto Complete -->
  				<div class="input-field col s12">
-                 <input type="text" id="autocomplete-input" class="autocomplete">
-                  <label for="autocomplete-input">Select User</label>
-                 
+                 <label for="users-list-verified">Select User</label>
+           		 <div class="input-field">
+              	<select class="form-control" id="users-list-verified">
+					<option value="">Any</option>
+					<?php
+					foreach($data['userlist']  as $detail) {
+		echo '<option value=' .$detail['UserId']. '>'.$detail['Email'].'</option>';
+					}?>
+              </select>
+            </div>
                 </div>
 				 
 				  
@@ -272,9 +280,7 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
           </div>
           <div class="content-overlay"></div>
-        </div>
-      </div>
-    </div>
+       
     <!-- END: Page Main-->
     <!-- BEGIN: Footer-->
 

@@ -59,7 +59,7 @@
 		else
 		{
 			 // Create query
-          $query = 'INSERT INTO ' . $this->table . ' SET Name = :Name, Email = :Email, Phone = :Phone, Password =:Password, DeviceToken=:DeviceToken, IsActive=:IsActive, IsDelete=:IsDelete,RoleId=:RoleId';
+          $query = 'INSERT INTO ' . $this->table . ' SET Name = :Name, Email = :Email, Phone = :Phone, Password =:Password, DeviceToken=:DeviceToken, IsActive=:IsActive,RoleId=:RoleId';
 
           // Prepare statement
           $stmt = $this->conn->prepare($query);
@@ -79,7 +79,7 @@
 		 $stmt->bindParam(':Password', $this->Password);
           $stmt->bindParam(':DeviceToken', $this->DeviceToken);
 		$stmt->bindParam(':IsActive', $this->IsActive);
-		$stmt->bindParam(':IsDelete', $this->IsDelete);
+		//$stmt->bindParam(':IsDelete', $this->IsDelete);
 		$stmt->bindParam(':RoleId', $this->RoleId);
 
           // Execute query
