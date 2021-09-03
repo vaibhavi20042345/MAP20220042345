@@ -27,12 +27,12 @@
 			
 // 			$query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode,CompanyName IsScratched, DiscountPercentage) VALUES (NULL, :UserId, :CouponCode,:CompanyName, 0, 7);';
 			  
-			  $query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode, IsScratched, DiscountPercentage) VALUES (NULL, :UserId, "NewUserCode1", 0, 5), (NULL, :UserId, "NewUserCode2", 0, 10),(NULL, :UserId, "NewUserCode3", 0, 15),(NULL, :UserId, "NewUserCode4", 0, 20),(NULL, :UserId, "NewUserCode5", 0, 25);';
+			  $query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode, IsScratched, DiscountPercentage) VALUES (NULL, :UserId,:CouponCode, 0, 5);';
 			  
 		
 			$stmt2 = $db->prepare($query2);
 			  $stmt2->bindParam(':UserId', $UserId,PDO::PARAM_INT);
-			  $stmt2->bindParam(':$date', $date);
+			  $stmt2->bindParam(':CouponCode', $CouponCode);
 
   $stmt2->execute();
 			"<pre>uid ";print_r($UserId); "</pre></br>";
