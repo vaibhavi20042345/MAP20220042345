@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <tbody>
 					<?php
 	foreach($data['couponslist']  as $detail) {
-  	echo '<tr><td>' .$detail['CouponCode']. '</td><td>' .$detail['User']. '</td><td>' .$detail['Company']. '</td><td>' .$detail['Discount']. '</td><td>' .$detail['ValidDate']. '</td><td>'?> <?php if($detail['Scratched']==0){?>
+  	echo '<tr><td>' .$detail['CouponCode']. '</td><td>' .$detail['User']. '</td><td>' .$detail['Company']. '</td><td>' .$detail['Discount']. '</td><td>' .$detail['ValidDate']. '</td><td>'?> <?php if($detail['Scratched']==1){?>
 					<i class="material-icons">check</i>
 					<?php } else { ?> <i class="material-icons dp48">clear</i> <?php }?> <?php $detail['Scratched']. '</td></tr>';
 	}	

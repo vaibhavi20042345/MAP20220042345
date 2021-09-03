@@ -203,11 +203,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <!-- <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4"> -->
                   <small class="errorTxt4"></small>
                 </div>
-				  <div class="input-field col s12">
-                 <input type="checkbox" name="All" id="All" />
-                <span>For All Users</span>
-				  
-                </div>
+				 
                <!-- Auto Complete -->
  				<div class="input-field col s12">
                  <label for="users-list-verified">Select User</label>

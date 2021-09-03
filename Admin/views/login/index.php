@@ -65,14 +65,14 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m12 l12 ml-2 mt-1">
+        <!-- <div class="col s12 m12 l12 ml-2 mt-1">
           <p>
             <label>
               <input type="checkbox" />
               <span>Remember Me</span>
             </label>
           </p>
-        </div>
+        </div> -->
       </div>
       <div class="row">
         <div class="input-field col s12">
@@ -81,12 +81,12 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6 m6 l6">
+        <!-- <div class="input-field col s6 m6 l6">
           <p class="margin medium-small"><a href="user-register.html">Register Now!</a></p>
-        </div>
-        <div class="input-field col s6 m6 l6">
+        </div> -->
+        <!-- <div class="input-field col s6 m6 l6">
           <p class="margin right-align medium-small"><a href="user-forgot-password.html">Forgot password ?</a></p>
-        </div>
+        </div> -->
       </div>
     </form>
   </div>
