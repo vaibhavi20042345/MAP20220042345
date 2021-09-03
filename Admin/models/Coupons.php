@@ -27,14 +27,15 @@
 			
 // 			$query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode,CompanyName IsScratched, DiscountPercentage) VALUES (NULL, :UserId, :CouponCode,:CompanyName, 0, 7);';
 			  
-			  $query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode,CompanyName, IsScratched, DiscountPercentage) VALUES (NULL, :UserId,:CouponCode,:CompanyName, 0, 5);';
+			  $query2 = 'INSERT INTO Coupon (CouponId, UserId, CouponCode,CompanyName, IsScratched,ValidDate, DiscountPercentage) VALUES (NULL, :UserId,:CouponCode,:CompanyName,0, :ValidDate, 5);';
 			  
 		
 			$stmt2 = $db->prepare($query2);
-			  $stmt2->bindParam(':UserId', $UserId,PDO::PARAM_INT);
-			  $stmt2->bindParam(':CouponCode', $CouponCode);
-$stmt2->bindParam(':CompanyName', $CompanyName);
-  $stmt2->execute();
+			$stmt2->bindParam(':UserId', $UserId,PDO::PARAM_INT);
+			$stmt2->bindParam(':CouponCode', $CouponCode);
+			$stmt2->bindParam(':CompanyName', $CompanyName);
+			$stmt2->bindParam(':ValidDate', $ValidDate);
+  			$stmt2->execute();
 			"<pre>uid ";print_r($UserId); "</pre></br>";
 			"<pre>cc";print_r($CouponCode); "</pre></br>";
 				"<pre>cn";print_r($CompanyName); "</pre></br>";
