@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
           <div class="container">
             <div class="row">
               <div class="col s10 m6 l6">
-                <h5 class="breadcrumbs-title mt-0 mb-0"><span>Form Validation</span></h5>
+                <h5 class="breadcrumbs-title mt-0 mb-0"><span>Add Coupon</span></h5>
                 <ol class="breadcrumbs mb-0">
                   <li class="breadcrumb-item"><a href="index.html">Home</a>
                   </li>
@@ -164,7 +164,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
  
   <!-- JQUERY VALIDATION -->
-
+ <form action="/coupon/saveCoupon" method="post" >
   <div class="row">
     <div class="col s12">
       <div id="validations" class="card card-tabs">
@@ -194,7 +194,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <div class="input-field col s12">
                   <label for="password">Valid Date *</label>
-					<input type="date" name="date1" name="ValidDate" id="ValidDate" min="<?= date('Y-m-d'); ?>">
+					<input type="date"  name="ValidDate" id="ValidDate" min="<?= date('Y-m-d'); ?>">
                   <small class="errorTxt3"></small>
                 </div>
                 <div class="input-field col s12">
@@ -204,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <small class="errorTxt4"></small>
                 </div>
 				  <div class="input-field col s12">
-                 <input type="checkbox" />
+                 <input type="checkbox" name="All" id="All" />
                 <span>For All Users</span>
 				  
                 </div>
@@ -212,8 +212,8 @@ License: You must have a valid license purchased only from themeforest(the above
  				<div class="input-field col s12">
                  <label for="users-list-verified">Select User</label>
            		 <div class="input-field">
-              	<select class="form-control" id="users-list-verified">
-					<option value="">Any</option>
+              	<select class="form-control" id="UserId" name="UserId">
+					<option value="0">All</option>
 					<?php
 					foreach($data['userlist']  as $detail) {
 		echo '<option value=' .$detail['UserId']. '>'.$detail['Email'].'</option>';
@@ -236,6 +236,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
     </div>
+			  </form>	  
   </div>
 </div>
 		  <!-- START RIGHT SIDEBAR NAV -->

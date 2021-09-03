@@ -15,5 +15,27 @@ class Coupon extends Controller {
  	    $this->view('coupon/addCoupons', ['userlist' => $userlist]);
  		die;
 	}
+	
+	public function saveCoupon()
+	{
+		$UserId = $_REQUEST['UserId'];
+		$CouponCode = $_REQUEST['CouponCode'];
+		$CompanyName = $_REQUEST['CompanyName'];
+		$ValidDate = $_REQUEST['ValidDate'];
+		$Discount= $_REQUEST['Discount'];
+		$All= $_REQUEST['All'];
+		$course = $this->model('Coupons');
+		// "<pre>uid ";print_r($UserId); "</pre></br>";
+		// 	"<pre>cc";print_r($CouponCode); "</pre></br>";
+		// 		"<pre>cn";print_r($CompanyName); "</pre></br>";
+		// 			"<pre>date";print_r($ValidDate); "</pre></br>";
+		// 				"<pre>discount";print_r($Discount); "</pre></br>";
+		// 				"<pre>all";print_r($All); "</pre>";
+		//	;exit;
+		
+ 	
+		 $course->add_coupon($UserId,$CouponCode,$CompanyName,$ValidDate,$Discount);
+		die;
+	}
 
 }
